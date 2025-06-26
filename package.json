@@ -1,5 +1,5 @@
 {
-  "name": "ts-to-js",
+  "name": "@icebob/ts-to-js",
   "version": "1.0.0",
   "description": "Convert Typescript file to (readable) Javascript file",
   "main": "index.js",
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "nodemon bin/ts-to-js.js --prettier test/simple.ts",
-    "dev:folder": "rimraf tmp && node bin/ts-to-js.js --prettier test tmp"
+    "dev:folder": "rimraf tmp && node bin/ts-to-js.js --prettier test tmp",
+    "release": "npm publish --access public"
   },
   "files": [
     "bin",

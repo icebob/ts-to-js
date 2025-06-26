@@ -3,7 +3,7 @@ It's a CLI too which is able to convert Typescript files to (readable) Javascrip
 
 # Installation
 ```bash
-npm install -g ts-to-js
+npm install -g @icebob/ts-to-js
 ```
 
 # Usage
