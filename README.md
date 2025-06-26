@@ -1,6 +1,54 @@
 # ts-to-js
 It's a CLI too which is able to convert Typescript files to (readable) Javascript files. It uses [ts-blank-space](https://github.com/bloomberg/ts-blank-space) to remove the types from typescript files and convert them to blank spaces. After that, it uses [Prettier](https://prettier.io/) to format the code to a more readable Javascript code.
 
+# Example
+
+**Typescript**
+```ts
+import type { MyType } from './types.d.ts';
+
+interface HasField {
+    field: string;
+}
+
+export class C<T> extends Array<T> implements HasField {
+    public field!: string;
+
+    method<T>(this: HasField, a?: MyType): void {
+       this.field = a as string;
+    }
+}
+```
+
+**Javascript**
+```js
+                                           
+
+                    
+                  
+ 
+
+export class C    extends Array                        {
+           field         ;
+
+    method   (                a         )       {
+       this.field = a          ;
+    }
+}
+
+```
+
+**Javascript with Prettier**
+```js
+export class C extends Array {
+  field;
+
+  method(a) {
+    this.field = a;
+  }
+}
+```
+
 # Installation
 ```bash
 npm install -g @icebob/ts-to-js
