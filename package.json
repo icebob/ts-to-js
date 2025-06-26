@@ -1,0 +1,31 @@
+{
+  "name": "ts-to-js",
+  "version": "1.0.0",
+  "description": "Convert Typescript file to (readable) Javascript file",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "ts-to-js": "./bin/ts-to-js.js"
+  },
+  "scripts": {
+    "dev": "nodemon bin/ts-to-js.js --prettier test/simple.ts",
+    "dev:folder": "rimraf tmp && node bin/ts-to-js.js --prettier test tmp"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "keywords": [],
+  "author": "Icebob",
+  "license": "MIT",
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "mri": "^1.2.0",
+    "prettier": "^3.6.1",
+    "ts-blank-space": "^0.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "rimraf": "^6.0.1"
+  }
+}
